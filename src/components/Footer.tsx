@@ -1,37 +1,32 @@
 import { Github, Linkedin, Mail, Heart, Code2, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  const socialLinks = [
-    {
-      icon: Github,
-      href: "https://github.com",
-      label: "GitHub"
-    },
-    {
-      icon: Linkedin,
-      href: "https://linkedin.com",
-      label: "LinkedIn"
-    },
-    {
-      icon: Mail,
-      href: "mailto:akarshthodaskar@gmail.com",
-      label: "Email"
-    }
-  ];
-
+  const socialLinks = [{
+    icon: Github,
+    href: "https://github.com",
+    label: "GitHub"
+  }, {
+    icon: Linkedin,
+    href: "https://linkedin.com",
+    label: "LinkedIn"
+  }, {
+    icon: Mail,
+    href: "mailto:akarshthodaskar@gmail.com",
+    label: "Email"
+  }];
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <footer className="relative py-20 px-6 bg-background-secondary border-t border-primary/20">
+  return <footer className="relative py-20 px-6 bg-background-secondary border-t border-primary/20">
       {/* Background Effects */}
       <div className="absolute inset-0 particles-bg opacity-30"></div>
       
@@ -45,26 +40,14 @@ const Footer = () => {
               </div>
               <h3 className="text-2xl font-bold gradient-text">Akarsh P</h3>
             </div>
-            <p className="text-foreground-muted leading-relaxed mb-6">
-              Full-Stack Developer passionate about creating innovative digital solutions 
-              and building the future of web technology.
-            </p>
+            <p className="text-foreground-muted leading-relaxed mb-6">Computer science student passionate about creating innovative digital solutions and building the future of web technology.</p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group p-3 bg-primary/10 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110"
-                    aria-label={social.label}
-                  >
+              const Icon = social.icon;
+              return <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" className="group p-3 bg-primary/10 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110" aria-label={social.label}>
                     <Icon className="w-5 h-5 text-foreground-muted group-hover:text-primary transition-colors duration-300" />
-                  </a>
-                );
-              })}
+                  </a>;
+            })}
             </div>
           </div>
           
@@ -72,22 +55,27 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
             <div className="grid grid-cols-2 gap-3">
-              {[
-                { label: "About", href: "about" },
-                { label: "Skills", href: "skills" },
-                { label: "Projects", href: "projects" },
-                { label: "Blog", href: "blog" },
-                { label: "Resume", href: "resume" },
-                { label: "Contact", href: "contact" }
-              ].map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-left text-foreground-muted hover:text-primary transition-colors duration-300"
-                >
+              {[{
+              label: "About",
+              href: "about"
+            }, {
+              label: "Skills",
+              href: "skills"
+            }, {
+              label: "Projects",
+              href: "projects"
+            }, {
+              label: "Blog",
+              href: "blog"
+            }, {
+              label: "Resume",
+              href: "resume"
+            }, {
+              label: "Contact",
+              href: "contact"
+            }].map(link => <button key={link.href} onClick={() => scrollToSection(link.href)} className="text-left text-foreground-muted hover:text-primary transition-colors duration-300">
                   {link.label}
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
           
@@ -105,11 +93,7 @@ const Footer = () => {
                 <span className="text-primary font-medium">Location:</span> Bengaluru, INDIA
               </p>
             </div>
-            <Button 
-              variant="cyber" 
-              onClick={() => scrollToSection('contact')}
-              className="w-full"
-            >
+            <Button variant="cyber" onClick={() => scrollToSection('contact')} className="w-full">
               Start a Project
             </Button>
           </div>
@@ -127,12 +111,7 @@ const Footer = () => {
             </div>
             
             {/* Back to Top Button */}
-            <Button
-              variant="hero"
-              size="sm"
-              onClick={scrollToTop}
-              className="flex items-center gap-2"
-            >
+            <Button variant="hero" size="sm" onClick={scrollToTop} className="flex items-center gap-2">
               <ArrowUp className="w-4 h-4" />
               Back to Top
             </Button>
@@ -143,23 +122,12 @@ const Footer = () => {
       {/* Floating Social Icons */}
       <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 hidden xl:flex flex-col gap-4">
         {socialLinks.map((social, index) => {
-          const Icon = social.icon;
-          return (
-            <a
-              key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-3 bg-background-card/80 backdrop-blur-sm rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110 neon-glow"
-              aria-label={social.label}
-            >
+        const Icon = social.icon;
+        return <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" className="group p-3 bg-background-card/80 backdrop-blur-sm rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110 neon-glow" aria-label={social.label}>
               <Icon className="w-5 h-5 text-foreground-muted group-hover:text-primary transition-colors duration-300" />
-            </a>
-          );
-        })}
+            </a>;
+      })}
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

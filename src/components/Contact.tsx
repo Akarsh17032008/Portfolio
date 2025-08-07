@@ -66,7 +66,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Bengaluru, INDIA",
       color: "text-accent-neon"
     }
   ];

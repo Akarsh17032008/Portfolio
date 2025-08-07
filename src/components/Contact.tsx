@@ -45,7 +45,7 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:akarsh@example.com",
+      href: "mailto:akarshthodaskar@gmail.com",
       color: "hover:text-primary"
     }
   ];
@@ -54,7 +54,7 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "akarsh@example.com",
+      value: "akarshthodaskar@gmail.com",
       color: "text-primary"
     },
     {

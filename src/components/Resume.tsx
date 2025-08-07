@@ -43,15 +43,7 @@ const Resume = () => {
                 <h3 className="text-2xl font-bold text-foreground">Experience</h3>
               </div>
               
-              <div className="space-y-6">
-                {experiences.map((exp, index) => <div key={index} className="relative pl-6 border-l-2 border-primary/30">
-                    <div className="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full"></div>
-                    <h4 className="text-lg font-semibold text-foreground">{exp.title}</h4>
-                    <p className="text-primary font-medium">{exp.company}</p>
-                    <p className="text-sm text-foreground-muted mb-2">{exp.period}</p>
-                    <p className="text-foreground-muted">{exp.description}</p>
-                  </div>)}
-              </div>
+              
             </div>
             
             {/* Education */}
@@ -66,10 +58,10 @@ const Resume = () => {
               <div className="space-y-4">
                 {education.map((edu, index) => <div key={index} className="relative pl-6 border-l-2 border-cyber-blue/30">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 bg-cyber-blue rounded-full"></div>
-                    <h4 className="text-lg font-semibold text-foreground">{edu.degree}</h4>
-                    <p className="text-cyber-blue font-medium">{edu.institution}</p>
-                    <p className="text-sm text-foreground-muted mb-2">{edu.period}</p>
-                    <p className="text-foreground-muted">{edu.grade}</p>
+                    
+                    
+                    
+                    
                   </div>)}
               </div>
             </div>

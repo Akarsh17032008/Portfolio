@@ -35,9 +35,9 @@ const Hero = () => {
           </h1>
           
           <div className="relative mb-8">
-            <h2 className="text-2xl md:text-3xl text-foreground-muted mb-4">
-              Full-Stack Developer
-            </h2>
+          <h2 className="text-2xl md:text-3xl text-foreground-muted mb-4">
+            Computer Science Student
+          </h2>
             <div className="w-32 h-1 bg-gradient-primary mx-auto rounded-full pulse-neon"></div>
           </div>
           

@@ -1,40 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Download, GraduationCap, Briefcase, Award, ExternalLink } from "lucide-react";
-
 const Resume = () => {
-  const experiences = [
-    {
-      title: "Senior Full-Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2022 - Present",
-      description: "Lead development of scalable web applications serving 100K+ users"
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Solutions Co.",
-      period: "2020 - 2022", 
-      description: "Built responsive web applications using React and modern CSS frameworks"
-    }
-  ];
-
-  const education = [
-    {
-      degree: "Bachelor of Computer Science",
-      institution: "Technology University",
-      period: "2016 - 2020",
-      grade: "First Class Honours"
-    }
-  ];
-
-  const achievements = [
-    "Led team of 5 developers on enterprise project",
-    "Optimized application performance by 40%",
-    "Contributed to 10+ open-source projects",
-    "Speaker at 3 tech conferences"
-  ];
-
-  return (
-    <section id="resume" className="py-20 px-6">
+  const experiences = [{
+    title: "Senior Full-Stack Developer",
+    company: "Tech Innovations Inc.",
+    period: "2022 - Present",
+    description: "Lead development of scalable web applications serving 100K+ users"
+  }, {
+    title: "Frontend Developer",
+    company: "Digital Solutions Co.",
+    period: "2020 - 2022",
+    description: "Built responsive web applications using React and modern CSS frameworks"
+  }];
+  const education = [{
+    degree: "Bachelor of Computer Science",
+    institution: "Technology University",
+    period: "2016 - 2020",
+    grade: "First Class Honours"
+  }];
+  const achievements = ["Led team of 5 developers on enterprise project", "Optimized application performance by 40%", "Contributed to 10+ open-source projects", "Speaker at 3 tech conferences"];
+  return <section id="resume" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -59,15 +44,13 @@ const Resume = () => {
               </div>
               
               <div className="space-y-6">
-                {experiences.map((exp, index) => (
-                  <div key={index} className="relative pl-6 border-l-2 border-primary/30">
+                {experiences.map((exp, index) => <div key={index} className="relative pl-6 border-l-2 border-primary/30">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full"></div>
                     <h4 className="text-lg font-semibold text-foreground">{exp.title}</h4>
                     <p className="text-primary font-medium">{exp.company}</p>
                     <p className="text-sm text-foreground-muted mb-2">{exp.period}</p>
                     <p className="text-foreground-muted">{exp.description}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
             
@@ -81,15 +64,13 @@ const Resume = () => {
               </div>
               
               <div className="space-y-4">
-                {education.map((edu, index) => (
-                  <div key={index} className="relative pl-6 border-l-2 border-cyber-blue/30">
+                {education.map((edu, index) => <div key={index} className="relative pl-6 border-l-2 border-cyber-blue/30">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 bg-cyber-blue rounded-full"></div>
                     <h4 className="text-lg font-semibold text-foreground">{edu.degree}</h4>
                     <p className="text-cyber-blue font-medium">{edu.institution}</p>
                     <p className="text-sm text-foreground-muted mb-2">{edu.period}</p>
                     <p className="text-foreground-muted">{edu.grade}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -106,12 +87,10 @@ const Resume = () => {
               </div>
               
               <ul className="space-y-3">
-                {achievements.map((achievement, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                {achievements.map((achievement, index) => <li key={index} className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-accent-neon rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-foreground-muted">{achievement}</span>
-                  </li>
-                ))}
+                    
+                  </li>)}
               </ul>
             </div>
             
@@ -137,8 +116,6 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Resume;

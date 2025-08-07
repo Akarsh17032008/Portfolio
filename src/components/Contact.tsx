@@ -60,7 +60,7 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 9741319019",
       color: "text-cyber-blue"
     },
     {
